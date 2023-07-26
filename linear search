@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+void linear_search(int a[],int n,int num)
+{
+    for(int i=0; i<n; i++)
+    {
+        if(a[i]==num)
+        {
+            cout <<"Number Is Found & Index Number:" << i << endl;
+            return;
+        }
+    }
+    cout << "Not Found"<< endl;
+}
+int main()
+{
+    int n;
+    cout << "Array Size:";
+    cin >> n;
+    
+    int a[n];
+    cout << "Array:";
+    for(int i=0; i<n; i++){
+        cin >> a[i];
+    }
+    
+    int num;  
+    cout << "Number You Want to Search:";
+    cin >> num;
+    
+    linear_search(a,n,num);
+    
+    return 0;
+}
